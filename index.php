@@ -30,7 +30,8 @@
     <link rel="stylesheet" href="./iconLayers.css"/>
     <script src="./iconLayers.js"></script>-->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!--
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
@@ -121,14 +122,16 @@
 <body>
     
     <div class="container">
+        
+        <div id="logo">
+            <img src="seinf.png">
+        </div>
+
         <div id="nav">
-            <div id="logo">
-                <img src="seinf.png">
-            </div>
-            <div>
-                <h3>DEIT - Departamento de Infraestrutura de Transporte<br>
-                GISDEIT - Sistema de Informações Geográficas do DEIT</h3>
-            </div>
+            
+                <h2 style="margin-left: 25%">DEIT - Departamento de Infraestrutura de Transporte<br>
+                GISDEIT - Sistema de Informações Geográficas do DEIT</<h2>
+            
             
         </div>
         <div id="main">
@@ -137,26 +140,26 @@
         <div id="sidebar">
                 <div>
                     <div>
-                        <h6 style="float:left;">Consulte por Arquivo (Json/GeoJson - GEO)</h6>
+                        <h6 style="float: left;">Consulte por Arquivo (Json/GeoJson - GEO)</h6>
                     </div>
                         <input type="file" id="arquivo" class="form-control">
                         <input class="btn btn-primary" type="button" onclick="removerLayJson()"  value="Remover Tema" id="remLay">
 
                     <div>
-                        <h6 style="float:left;">Consulte por ShapeFile (.zip) </h6>
+                        <h6 style="float: left;">Consulte por ShapeFile (.zip) </h6>
                         <input type="file" id="shap" class="form-control">
                         <input class="btn btn-primary" type="button" onclick="removerLayShap()"  value="Remover Tema" id="remLay">
                     </div>
 
                     <div>
-                        <h5>Consulte por Coordenada</h5>
-
+                        <h6>Consulte por Coordenada</<h6>
+                        <br>
                         <label for="latitude">Latitude</label>
                         <input type="text" class="form-control" id="latitude" name="latitude" placeholder="ex. 0.0000000000000000">
-
+                        <br>
                         <label for="longitude">Longitude</label>
                         <input type="text" class="form-control" id="longitude" name="longitude" placeholder="ex. -0.0000000000000000">
-
+                        <br>
                         <input type="submit" class="btn btn-primary" onclick="addMarcador()" value="Enviar" id="remLay">
                         <input class="btn btn-primary" type="button" onclick="removerTema()"  value="Remover Marcador" id="remLay">
                     </div>
